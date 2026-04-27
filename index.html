@@ -8,25 +8,46 @@
     <meta name="author" content="Liangchao Xu">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=EB+Garamond:wght@500;600;700&display=swap">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
   </head>
 
   <body>
-    <main class="container">
+    <nav class="topnav">
+      <div class="topnav-inner">
+        <a href="#top" class="brand">Liangchao Xu</a>
+        <ul>
+          <li><a href="#news">News</a></li>
+          <li><a href="#research">Publications</a></li>
+          <li><a href="#education">Education</a></li>
+          <li><a href="#experience">Experience</a></li>
+          <li><a href="#awards">Awards</a></li>
+        </ul>
+      </div>
+    </nav>
+
+    <main class="container" id="top">
 
       <!-- ===== Hero ===== -->
       <section class="hero">
         <div class="hero-text">
-          <h1 class="name">Liangchao Xu (许梁超)</h1>
+          <h1 class="name">
+            Liangchao Xu
+            <span class="name-cn">许梁超</span>
+          </h1>
           <p class="bio">
-            I am a final-year undergraduate at the School of Intelligent Software and Engineering, Nanjing University,
-            and will continue at the School of Intelligence Science and Technology, NJU as a Ph.D. student starting September 2026.
-            I am very fortunate to be advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a> at the 3D Vision Lab.
-            I also work closely with <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a> from HKUST,
-            and was a visiting research intern with <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a>
-            at the University of Illinois Urbana-Champaign (UIUC) in Fall 2025.
-            I am currently a research intern at <a href="https://www.neural4d.com">DreamTech</a> in Shenzhen.
-            My research primarily focuses on 3D reconstruction and 3D generation.
+            I am a final-year undergraduate at <strong>Nanjing University</strong>, joining NJU's School of Intelligence Science and Technology as a Ph.D. student in September 2026.
+          </p>
+          <p class="bio">
+            I am fortunate to be advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a> at the <strong>3D Vision Lab</strong>, and to work closely with <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a> at <strong>HKUST</strong>.
+          </p>
+          <p class="bio">
+            I am currently a research intern at <a href="https://www.neural4d.com">DreamTech</a> in Shenzhen, and was a visiting student with <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a> at <strong>UIUC</strong> in Fall 2025.
+          </p>
+          <p class="bio">
+            My research focuses on <strong>3D reconstruction</strong> and <strong>3D generation</strong>.
           </p>
           <p class="links">
             <a href="mailto:kevinxu11155@gmail.com" aria-label="Email" title="Email">
@@ -63,7 +84,7 @@
       </section>
 
       <!-- ===== News ===== -->
-      <section class="news">
+      <section id="news" class="news">
         <h2>News</h2>
         <ul class="news-list">
           <li>
@@ -81,13 +102,9 @@
         </ul>
       </section>
 
-      <!-- ===== Research ===== -->
-      <section class="research">
-        <h2>Research</h2>
-        <p class="research-blurb">
-          My research focuses on 3D vision, including 3D reconstruction and 3D generation.
-          I aim to enable highly usable 3D interaction and controllable 3D content generation.
-        </p>
+      <!-- ===== Publications ===== -->
+      <section id="research" class="research">
+        <h2>Publications</h2>
 
         <article class="paper" onmouseout="GauUpate_stop()" onmouseover="GauUpate_start()">
           <div class="paper-thumb">
@@ -118,47 +135,41 @@
       </section>
 
       <!-- ===== Education ===== -->
-      <section class="experience">
+      <section id="education" class="experience">
         <h2>Education</h2>
         <ul class="entry-list">
           <li>
             <div class="entry-header">
-              <span class="entry-title">Nanjing University</span>
-              <span class="entry-period">2022.09 – 2026.06</span>
+              <div class="entry-left">
+                <div class="entry-title">Nanjing University</div>
+                <div class="entry-sub">B.Eng. in Software Engineering</div>
+              </div>
+              <div class="entry-meta">
+                <span class="entry-period">2022.09 – 2026.06</span>
+                <span class="entry-advisor">Advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a> and <a href="https://ygaojiany.github.io" class="collab">Jian Gao</a></span>
+              </div>
             </div>
-            <div class="entry-sub">B.Eng. in Software Engineering</div>
-            <div class="entry-detail">School of Intelligent Software and Engineering</div>
+            <div class="entry-detail">School of Intelligent Software and Engineering &nbsp;·&nbsp; 3D Vision Lab</div>
           </li>
         </ul>
       </section>
 
       <!-- ===== Research Experience ===== -->
-      <section class="experience">
+      <section id="experience" class="experience">
         <h2>Research Experience</h2>
         <ul class="entry-list">
           <li>
             <div class="entry-header">
               <div class="entry-left">
-                <div class="entry-title"><a href="https://www.neural4d.com">DreamTech</a>, Shenzhen</div>
+                <div class="entry-title"><a href="https://www.neural4d.com">DreamTech</a></div>
                 <div class="entry-sub">Research Intern</div>
               </div>
               <div class="entry-meta">
                 <span class="entry-period">2026.01 – Present</span>
+                <span class="entry-advisor">Advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a> and work with <span class="collab">Jiaye Fu</span></span>
               </div>
             </div>
             <div class="entry-detail">Working on distillation and acceleration of 3D mesh generation models.</div>
-          </li>
-          <li>
-            <div class="entry-header">
-              <div class="entry-left">
-                <div class="entry-title">Nanjing University</div>
-                <div class="entry-sub">Research Intern</div>
-              </div>
-              <div class="entry-meta">
-                <span class="entry-period">2024.02 – Present</span>
-                <span class="entry-advisor">Advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a></span>
-              </div>
-            </div>
           </li>
           <li>
             <div class="entry-header">
@@ -168,7 +179,7 @@
               </div>
               <div class="entry-meta">
                 <span class="entry-period">2025.08 – 2025.12</span>
-                <span class="entry-advisor">Advised by <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a> and <span class="advisor-name">Jiahua Dong</span></span>
+                <span class="entry-advisor">Advised by <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a> and work with <span class="collab">Jiahua Dong</span></span>
               </div>
             </div>
             <div class="entry-detail">Worked on dynamic reconstruction and generation of dynamic scenes (videos).</div>
@@ -181,7 +192,7 @@
               </div>
               <div class="entry-meta">
                 <span class="entry-period">2025.02 – 2025.06</span>
-                <span class="entry-advisor">Advised by <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a> and <span class="advisor-name">Chengwei Ren</span></span>
+                <span class="entry-advisor">Advised by <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a> and work with <span class="collab">Chengwei Ren</span></span>
               </div>
             </div>
             <div class="entry-detail">Working on relighting and inverse rendering of 3D scenes.</div>
@@ -190,7 +201,7 @@
       </section>
 
       <!-- ===== Awards & Honors ===== -->
-      <section class="experience">
+      <section id="awards" class="experience">
         <h2>Awards &amp; Honors</h2>
         <ul class="entry-list compact">
           <li>
