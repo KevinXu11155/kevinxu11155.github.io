@@ -157,13 +157,44 @@ a:focus {
 }
 
 .links {
-  font-size: 15px;
+  display: flex;
+  gap: 18px;
+  align-items: center;
   margin: 0;
+  flex-wrap: wrap;
 }
 
-.links .sep {
+.links a {
   color: var(--text-muted);
-  margin: 0 10px;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 22px;
+  height: 22px;
+  transition: color 0.15s ease, transform 0.15s ease;
+}
+
+.links a:hover {
+  color: var(--accent);
+  transform: translateY(-1px);
+}
+
+.links a svg {
+  width: 22px;
+  height: 22px;
+  display: block;
+}
+
+.links a.link-cv {
+  width: auto;
+  gap: 4px;
+}
+
+.link-label {
+  font-size: 11px;
+  font-weight: 600;
+  letter-spacing: 0.04em;
+  line-height: 1;
 }
 
 /* ---------- Section ---------- */
@@ -269,6 +300,36 @@ h2::after {
   margin: 0;
   color: var(--text-muted);
   line-height: 1.6;
+}
+
+/* ---------- News ---------- */
+.news-list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.news-list li {
+  display: grid;
+  grid-template-columns: 80px 1fr;
+  gap: 20px;
+  padding: 8px 0;
+  align-items: baseline;
+  font-size: 14.5px;
+  line-height: 1.6;
+}
+
+.news-date {
+  color: var(--accent);
+  font-size: 13px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+  letter-spacing: 0.02em;
+  white-space: nowrap;
+}
+
+.news-text {
+  color: var(--text);
 }
 
 /* ---------- Entry list (Education / Experience / Awards) ---------- */
@@ -398,6 +459,16 @@ span.highlight {
   .hero-photo {
     width: 180px;
     margin: 0 auto;
+  }
+
+  .links {
+    justify-content: center;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 2px;
+    padding: 10px 0;
   }
 
   .name {
