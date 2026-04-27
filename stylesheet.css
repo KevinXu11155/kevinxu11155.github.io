@@ -542,6 +542,25 @@ h2::after {
   line-height: 1.55;
 }
 
+.entry-place {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  margin: 2px 0 0 0;
+  line-height: 1.5;
+  font-style: italic;
+}
+
+.entry-place a {
+  color: inherit;
+  border-bottom: 1px dotted transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.entry-place a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
+}
+
 .entry-detail {
   font-size: 15px;
   color: var(--text);
