@@ -279,9 +279,14 @@ h2 {
 .entry-header {
   display: flex;
   justify-content: space-between;
-  align-items: baseline;
-  gap: 16px;
+  align-items: flex-start;
+  gap: 24px;
   margin-bottom: 6px;
+}
+
+.entry-left {
+  flex: 1;
+  min-width: 0;
 }
 
 .entry-title {
@@ -309,6 +314,32 @@ h2 {
   font-variant-numeric: tabular-nums;
   white-space: nowrap;
   flex-shrink: 0;
+}
+
+.entry-meta {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  gap: 3px;
+  text-align: right;
+  flex-shrink: 0;
+}
+
+.entry-advisor {
+  font-size: 13.5px;
+  color: var(--text-muted);
+  font-style: italic;
+}
+
+.entry-advisor a {
+  color: inherit;
+  border-bottom: 1px dashed transparent;
+  transition: color 0.15s ease, border-color 0.15s ease;
+}
+
+.entry-advisor a:hover {
+  color: var(--accent);
+  border-bottom-color: var(--accent);
 }
 
 .entry-sub {
@@ -369,6 +400,11 @@ span.highlight {
     flex-direction: column;
     align-items: flex-start;
     gap: 2px;
+  }
+
+  .entry-meta {
+    align-items: flex-start;
+    text-align: left;
   }
 
   .entry-period {
