@@ -9,97 +9,166 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
     <link rel="stylesheet" type="text/css" href="stylesheet.css">
-    
   </head>
 
   <body>
-    <table style="width:100%;max-width:800px;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-      <tr style="padding:0px">
-        <td style="padding:0px">
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-            <tr style="padding:0px">
-              <td style="padding:2.5%;width:63%;vertical-align:middle">
-                <p class="name" style="text-align: center;">
-                  Liangchao Xu (许梁超)
-                </p>
-                <p>
-		I am a senior student at the School of Intelligent Software and Engineering, Nanjing University. I am very fortunate to be advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a>
- at the 3D Vision Lab, School of Intelligence Science and Technology, Nanjing University. I also work closely with <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a>
- from HKUST. Currently, I am a research intern with <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a>
- at the University of Illinois Urbana-Champaign (UIUC). My research primarily focuses on 3D reconstruction and 3D generation.
-                </p>
-                <p style="text-align:center">
-                  <a href="mailto:kevinxu11155@gmail.com">Email</a> &nbsp;/&nbsp;
-                  <a href="data/LiangchaoXu_NJU.pdf">CV</a> &nbsp;/&nbsp;
-                  <a href="https://github.com/KevinXu11155/">Github</a>
-                </p>
-              </td>
-              <td style="padding:2.5%;width:37%;max-width:37%">
-                <a href="images/LiangchaoXu.png"><img style="width:100%;max-width:100%;object-fit: cover; border-radius: 50%;" alt="profile photo" src="images/LiangchaoXu.png" class="hoverZoomLink"></a>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
-              <tr>
-              <td style="padding:16px;width:100%;vertical-align:middle">
-                <h2>Research</h2>
-                <p>
-                  My research focuses on 3D vision, including 3D reconstruction and 3D generation. I aim to enable highly usable 3D interaction and controllable 3D content generation. 
-                </p>
-              </td>
-            </tr>
-          </tbody></table>
-          <table style="width:100%;border:0px;border-spacing:0px 10px;border-collapse:separate;margin-right:auto;margin-left:auto;"><tbody>
+    <main class="container">
 
-
-    <tr onmouseout="GauUpate_stop()" onmouseover="GauUpate_start()">
-      <td style="padding:16px;width:20%;vertical-align:middle">
-        <div class="one">
-          <div class="two" id='GauUpate_image'><video  width=100% height=100% muted autoplay loop>
-          <source src="images/GauUpate.mp4" type="video/mp4">
-          Your browser does not support the video tag.
-
-          </video></div>
-          <img src='images/GauUpdate.png' width="160">
+      <!-- ===== Hero ===== -->
+      <section class="hero">
+        <div class="hero-text">
+          <h1 class="name">Liangchao Xu (许梁超)</h1>
+          <p class="bio">
+            I am a final-year undergraduate at the School of Intelligent Software and Engineering, Nanjing University,
+            and will continue at the School of Intelligence Science and Technology, NJU as a Ph.D. student starting September 2026.
+            I am very fortunate to be advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a> at the 3D Vision Lab.
+            I also work closely with <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a> from HKUST,
+            and was a visiting research intern with <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a>
+            at the University of Illinois Urbana-Champaign (UIUC) in Fall 2025.
+            I am currently a research intern at <a href="https://www.neural4d.com">DreamTech</a> in Shenzhen.
+            My research primarily focuses on 3D reconstruction and 3D generation.
+          </p>
+          <p class="links">
+            <a href="mailto:kevinxu11155@gmail.com">Email</a>
+            <span class="sep">/</span>
+            <a href="data/LiangchaoXu_NJU.pdf">CV</a>
+            <span class="sep">/</span>
+            <a href="https://github.com/KevinXu11155/">Github</a>
+          </p>
         </div>
-        <script type="text/javascript">
-          function GauUpate_start() {
-            document.getElementById('GauUpate_image').style.opacity = "1";
-          }
+        <div class="hero-photo">
+          <a href="images/LiangchaoXu.png">
+            <img alt="profile photo" src="images/LiangchaoXu.png">
+          </a>
+        </div>
+      </section>
 
-          function GauUpate_stop() {
-            document.getElementById('GauUpate_image').style.opacity = "0";
-          }
-          GauUpate_stop()
-        </script>
-      </td>
-      <td style="padding:8px;width:80%;vertical-align:middle">
-<!--         <a href="https://szymanowiczs.github.io/GauUpate"> -->
-          <span class="papertitle">GauUpate: New Object Insertion in 3D Gaussian Fields with Consistent Global Illumination</span>
-        </a>
-        <br>
-        Chengwei Ren</a>,
-        Fan Zhang</a>,
-	        <strong>Liangchao Xu</strong>,
-        	Liang Pan</a>,
-        <a href="https://liuziwei7.github.io/">Ziwei Liu</a>,
-        Wenping Wang</a>,
-        Xiao-Ping Zhang</a>,
-        <a href="https://liuyuan-pal.github.io/">Yuan Liu</a>
-        <br>
-        <em>ICCV</em>, 2025
-        <br>
-<!--         <a href="https://szymanowiczs.github.io/GauUpate">project page</a>
-        /
-        <a href="https://szymanowiczs.github.io/GauUpate">arXiv</a> -->
-        <p></p>
-        <p>
-		By introducing GauUpdate, we enable fast and consistent insertion of new objects into existing 3D Gaussian fields by relighting them with inverse rendering for appearance alignment across varying lighting conditions.
+      <!-- ===== Research ===== -->
+      <section class="research">
+        <h2>Research</h2>
+        <p class="research-blurb">
+          My research focuses on 3D vision, including 3D reconstruction and 3D generation.
+          I aim to enable highly usable 3D interaction and controllable 3D content generation.
         </p>
-      </td>
-    </tr>
-        </td>
-      </tr>
-    </table>
+
+        <article class="paper" onmouseout="GauUpate_stop()" onmouseover="GauUpate_start()">
+          <div class="paper-thumb">
+            <img src="images/GauUpdate.png" alt="GauUpdate">
+            <div class="thumb-overlay" id="GauUpate_image">
+              <video width="100%" height="100%" muted autoplay loop playsinline>
+                <source src="images/GauUpate.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+          </div>
+          <div class="paper-info">
+            <a class="papertitle" href="https://openaccess.thecvf.com/content/ICCV2025/html/Ren_GauUpdate_New_Object_Insertion_in_3D_Gaussian_Fields_with_Consistent_ICCV_2025_paper.html">GauUpdate: New Object Insertion in 3D Gaussian Fields with Consistent Global Illumination</a>
+            <p class="authors">
+              Chengwei Ren, Fan Zhang, <strong>Liangchao Xu</strong>, Liang Pan,
+              <a href="https://liuziwei7.github.io/">Ziwei Liu</a>, Wenping Wang, Xiao-Ping Zhang,
+              <a href="https://liuyuan-pal.github.io/">Yuan Liu</a>
+            </p>
+            <p class="venue"><em>ICCV</em>, 2025</p>
+            <p class="abstract">
+              By introducing GauUpdate, we enable fast and consistent insertion of new objects into existing
+              3D Gaussian fields by relighting them with inverse rendering for appearance alignment across
+              varying lighting conditions.
+            </p>
+          </div>
+        </article>
+
+      </section>
+
+      <!-- ===== Education ===== -->
+      <section class="experience">
+        <h2>Education</h2>
+        <ul class="entry-list">
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">Nanjing University</span>
+              <span class="entry-period">2026.09 – 2031.06 (Expected)</span>
+            </div>
+            <div class="entry-sub">Ph.D. in Computer Science and Technology</div>
+            <div class="entry-detail">School of Intelligence Science and Technology</div>
+          </li>
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">Nanjing University</span>
+              <span class="entry-period">2022.09 – 2026.06</span>
+            </div>
+            <div class="entry-sub">B.Eng. in Software Engineering</div>
+            <div class="entry-detail">School of Intelligent Software and Engineering</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ===== Research Experience ===== -->
+      <section class="experience">
+        <h2>Research Experience</h2>
+        <ul class="entry-list">
+          <li>
+            <div class="entry-header">
+              <span class="entry-title"><a href="https://www.neural4d.com">DreamTech</a>, Shenzhen</span>
+              <span class="entry-period">2026.01 – Present</span>
+            </div>
+            <div class="entry-sub">Research Intern</div>
+            <div class="entry-detail">Working on distillation and acceleration of 3D mesh generation models.</div>
+          </li>
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">3D Vision Lab, Nanjing University</span>
+              <span class="entry-period">2024.02 – Present</span>
+            </div>
+            <div class="entry-sub">Research Intern, advised by <a href="https://yoyo000.github.io">Prof. Yao Yao</a></div>
+          </li>
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">University of Illinois Urbana-Champaign</span>
+              <span class="entry-period">2025.08 – 2025.12</span>
+            </div>
+            <div class="entry-sub">Visiting Research Intern, advised by <a href="https://yxw.cs.illinois.edu/">Prof. Yuxiong Wang</a></div>
+            <div class="entry-detail">Worked on dynamic reconstruction and generation of dynamic scenes (videos).</div>
+          </li>
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">Hong Kong University of Science and Technology</span>
+              <span class="entry-period">2025.02 – 2025.06</span>
+            </div>
+            <div class="entry-sub">Research Intern (Remote), Division of Integrative Systems and Design, advised by <a href="https://liuyuan-pal.github.io">Prof. Yuan Liu</a></div>
+            <div class="entry-detail">Working on relighting and inverse rendering of 3D scenes.</div>
+          </li>
+        </ul>
+      </section>
+
+      <!-- ===== Awards & Honors ===== -->
+      <section class="experience">
+        <h2>Awards &amp; Honors</h2>
+        <ul class="entry-list compact">
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">Light of Mobility: Digital Intelligence Innovation Scholarship</span>
+              <span class="entry-period">2024.09</span>
+            </div>
+          </li>
+          <li>
+            <div class="entry-header">
+              <span class="entry-title">People's Scholarship</span>
+              <span class="entry-period">2023.09</span>
+            </div>
+          </li>
+        </ul>
+      </section>
+
+    </main>
+
+    <script type="text/javascript">
+      function GauUpate_start() {
+        document.getElementById('GauUpate_image').style.opacity = "1";
+      }
+      function GauUpate_stop() {
+        document.getElementById('GauUpate_image').style.opacity = "0";
+      }
+      GauUpate_stop();
+    </script>
   </body>
 </html>
