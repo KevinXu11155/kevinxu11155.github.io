@@ -17,8 +17,6 @@
     <script data-goatcounter="https://kevinxu.goatcounter.com/count"
             async src="//gc.zgo.at/count.js"></script>
 
-    <!-- Visitor counter (busuanzi) -->
-    <script async src="//busuanzi.ibruce.info/busuanzi/2.3/busuanzi.pure.mini.js"></script>
   </head>
 
   <body>
@@ -249,12 +247,7 @@
       <footer class="site-footer">
         <span class="visit-stat">
           <span class="visit-label">Total visits</span>
-          <span class="visit-num" id="busuanzi_value_site_pv">···</span>
-        </span>
-        <span class="visit-sep">·</span>
-        <span class="visit-stat">
-          <span class="visit-label">Today</span>
-          <span class="visit-num" id="busuanzi_value_today_pv">···</span>
+          <span class="visit-num" id="visit-total">···</span>
         </span>
       </footer>
 
@@ -344,6 +337,22 @@
           });
         }, { threshold: 0, rootMargin: '-30% 0px -55% 0px' });
         sections.forEach(function (s) { navObserver.observe(s); });
+      })();
+
+      // Visitor count (GoatCounter)
+      (function () {
+        var el = document.getElementById('visit-total');
+        if (!el) return;
+        fetch('https://kevinxu.goatcounter.com/counter/TOTAL.json')
+          .then(function (r) { return r.ok ? r.json() : null; })
+          .then(function (d) {
+            if (d && typeof d.count === 'string') {
+              el.textContent = d.count;
+            } else if (d && typeof d.count === 'number') {
+              el.textContent = d.count.toLocaleString();
+            }
+          })
+          .catch(function () {});
       })();
 
       // Back to top
