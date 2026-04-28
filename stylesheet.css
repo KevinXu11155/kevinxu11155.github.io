@@ -146,6 +146,40 @@ html {
   color: var(--accent);
 }
 
+.nav-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-between;
+  width: 24px;
+  height: 18px;
+  background: transparent;
+  border: 0;
+  cursor: pointer;
+  padding: 0;
+}
+
+.nav-toggle span {
+  display: block;
+  width: 100%;
+  height: 2px;
+  background: var(--text);
+  border-radius: 2px;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+  transform-origin: center;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(1) {
+  transform: translateY(8px) rotate(45deg);
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(2) {
+  opacity: 0;
+}
+
+.nav-toggle[aria-expanded="true"] span:nth-child(3) {
+  transform: translateY(-8px) rotate(-45deg);
+}
+
 body {
   font-family: 'Lato', -apple-system, BlinkMacSystemFont, 'Segoe UI', Verdana, Helvetica, sans-serif;
   font-size: 16px;
@@ -580,24 +614,45 @@ span.highlight {
 /* ---------- Responsive ---------- */
 @media (max-width: 720px) {
   .topnav-inner {
-    padding: 10px 16px;
+    padding: 12px 18px;
     gap: 12px;
   }
 
-  .topnav .brand {
+  .nav-toggle {
+    display: flex;
+  }
+
+  .topnav .nav-links {
     display: none;
+    position: absolute;
+    top: 100%;
+    left: 0;
+    right: 0;
+    flex-direction: column;
+    gap: 0;
+    background: rgba(250, 249, 245, 0.96);
+    backdrop-filter: saturate(180%) blur(10px);
+    -webkit-backdrop-filter: saturate(180%) blur(10px);
+    border-bottom: 1px solid var(--border);
+    padding: 8px 18px;
   }
 
-  .topnav ul {
-    gap: 16px;
-    width: 100%;
-    justify-content: space-between;
-    overflow-x: auto;
+  .topnav .nav-links.open {
+    display: flex;
   }
 
-  .topnav a {
-    font-size: 13px;
-    white-space: nowrap;
+  .topnav .nav-links li {
+    border-bottom: 1px solid var(--border);
+  }
+
+  .topnav .nav-links li:last-child {
+    border-bottom: none;
+  }
+
+  .topnav .nav-links a {
+    display: block;
+    padding: 12px 0;
+    font-size: 15px;
   }
 
   .container {
