@@ -748,6 +748,42 @@ h2::after {
   line-height: 1.7;
 }
 
+/* ---------- Footer ---------- */
+.site-footer {
+  margin-top: 72px;
+  padding: 18px 0 0 0;
+  border-top: 1px solid var(--border);
+  font-size: 13px;
+  color: var(--text-muted);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  letter-spacing: 0.02em;
+}
+
+.visit-stat {
+  display: inline-flex;
+  align-items: baseline;
+  gap: 6px;
+}
+
+.visit-label {
+  text-transform: uppercase;
+  font-size: 11px;
+  letter-spacing: 0.08em;
+}
+
+.visit-num {
+  color: var(--accent);
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+
+.visit-sep {
+  color: var(--border);
+}
+
 /* ---------- Misc ---------- */
 strong {
   font-weight: 700;
