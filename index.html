@@ -355,6 +355,34 @@
           .catch(function () {});
       })();
 
+      // 3D tilt on hover
+      (function () {
+        if (window.matchMedia && window.matchMedia('(hover: none)').matches) return;
+        function initTilt(el, angle, extra) {
+          el.addEventListener('mouseenter', function () {
+            el.style.transition = 'transform 0.08s ease-out';
+          });
+          el.addEventListener('mousemove', function (e) {
+            var rect = el.getBoundingClientRect();
+            var x = (e.clientX - rect.left) / rect.width - 0.5;
+            var y = (e.clientY - rect.top) / rect.height - 0.5;
+            el.style.transform =
+              'perspective(900px) ' + extra +
+              ' rotateX(' + (-y * angle) + 'deg)' +
+              ' rotateY(' + (x * angle) + 'deg)';
+          });
+          el.addEventListener('mouseleave', function () {
+            el.style.transition = 'transform 0.45s cubic-bezier(.2,.8,.2,1)';
+            el.style.transform = '';
+          });
+        }
+        var heroImg = document.querySelector('.hero-photo img');
+        if (heroImg) initTilt(heroImg, 6, 'scale(1.03)');
+        document.querySelectorAll('.paper').forEach(function (p) {
+          initTilt(p, 4, 'translateY(-3px)');
+        });
+      })();
+
       // Back to top
       (function () {
         var btn = document.getElementById('back-to-top');
