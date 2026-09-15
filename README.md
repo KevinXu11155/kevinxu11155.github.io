@@ -1,1 +1,3 @@
-This is the source code to Jon Barron's public academic website: https://jonbarron.info/. Feel free to clone this code for your own personal use.
+# Liangchao Xu's Academic Homepage
+
+Source for <https://kevinxu11155.github.io>, including the homepage and academic CV.
