@@ -277,35 +277,6 @@
           <strong>Overview of Spe3DUp.</strong> Top: coarse-to-fine generation pipeline combining coarse global shape generation, voxelized geometry conditioning, high-resolution refinement, and region-parallel mesh simplification. Bottom: FTD (guidance distillation + interval compression) and refinement decoding acceleration.
         </figcaption>
       </figure>
-
-      <div class="method-cards">
-        <div class="method-card">
-          <span class="method-step">Stage 1 &middot; Guidance Distillation</span>
-          <h3>Fold CFG into One Conditional Pass</h3>
-          <p>
-            Replaces the two teacher CFG forward branches (image-conditional and image-null, keeping voxel anchors intact during refinement) with a single conditional student network, immediately halving per-step NFE.
-          </p>
-          <div class="formula-box">L_cfg = E[ &lambda;(t) || v_&psi;(x_t, t, c) &minus; v_cfg(x_t, t, c) ||&sup2; ]</div>
-        </div>
-
-        <div class="method-card">
-          <span class="method-step">Stage 2 &middot; Interval Compression</span>
-          <h3>Paired Endpoint Trajectory Matching</h3>
-          <p>
-            From the same starting noisy state <em>x<sub>a</sub></em> and conditioning <em>c</em>, the frozen guidance-distilled teacher rolls out <em>m</em> Euler substeps while the student crosses [<em>a, b</em>] in one forward pass (50&rarr;10 coarse, 50&rarr;5 refine).
-          </p>
-          <div class="formula-box">L_traj = E[ || x_b^S &minus; sg(x_m^T) ||&sup2; ]</div>
-        </div>
-
-        <div class="method-card">
-          <span class="method-step">System &middot; Decoding &amp; Remeshing</span>
-          <h3>Reuse, Recompute, and Parallel QEM</h3>
-          <p>
-            Reuses preceding-resolution scalar fields near the surface, recomputes critical sign-inconsistent query batches (cutting field-reuse deviation by ~77% at +1.2s cost), and parallelizes QEM simplification across 16 spatial partitions.
-          </p>
-          <div class="formula-box">Field: 25.6s &rarr; 12.3s &nbsp;|&nbsp; QEM: 53.2s &rarr; 7.8s</div>
-        </div>
-      </div>
     </div>
   </section>
 
