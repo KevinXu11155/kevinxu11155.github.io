@@ -287,14 +287,27 @@ a:hover {
   font-style: italic;
   font-size: 0.98rem;
   color: var(--ink-secondary);
-  margin-bottom: 1.65rem;
+  margin-bottom: 0.28rem;
 }
 
-.affiliations sup {
+.affiliations sup,
+.author-notes sup {
   font-style: normal;
   color: var(--teal);
   font-weight: 600;
   margin-right: 1px;
+}
+
+.author-notes {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.2rem 1.35rem;
+  font-family: var(--font-serif);
+  font-style: italic;
+  font-size: 0.9rem;
+  color: var(--ink-muted);
+  margin-bottom: 1.65rem;
 }
 
 /* Action Buttons */
