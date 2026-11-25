@@ -96,18 +96,19 @@ a:hover {
 .nav-brand {
   display: inline-flex;
   align-items: center;
-  gap: 0.5rem;
-  font-weight: 700;
-  font-size: 1.02rem;
-  letter-spacing: -0.02em;
   color: var(--ink);
+  transition: opacity 0.16s ease, transform 0.16s ease;
 }
 
-.nav-brand-dot {
-  width: 9px;
-  height: 9px;
-  border-radius: 50%;
-  background: linear-gradient(135deg, #14b8a6, #158473);
+.nav-brand:hover {
+  opacity: 0.86;
+  transform: translateY(-0.5px);
+}
+
+.nav-wordmark {
+  height: 26px;
+  width: auto;
+  display: block;
 }
 
 .nav-links {
